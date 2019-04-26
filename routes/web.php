@@ -11,6 +11,7 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/', 'UserController@index');
+$router->post('/add', 'UserController@add');
+$router->post('/edit/{id}', 'UserController@edit');
+$router->post('/delete/{id}', 'UserController@delete');
